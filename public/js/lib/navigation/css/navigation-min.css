@@ -11,9 +11,9 @@ del{text-decoration:line-through}
 table{border-collapse:collapse;border-spacing:0}
 .ui-navigator-list,.ui-navigator-list li{list-style:none}
 .ui-navigator-list li{white-space:nowrap}
-.ui-navigator{border-top:1px solid #2468c9;border-bottom:1px solid #0145a5;background:#2773dc}
+.ui-navigator{border-top:1px solid #2468c9;border-bottom:1px solid #0145a5;background:#2773dc;height:34px}
 .ui-navigator-list{width:100%;display:-webkit-box}
-.ui-navigator-list li{line-height:34px;font-size:16px;font-weight:700;text-align:center;-webkit-box-flex:1;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center}
+.ui-navigator-list li{line-height:34px;font-size:16px;font-weight:700;text-align:center;-webkit-box-flex:1;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;}
 .ui-navigator-list li a{text-decoration:none;color:#fff;display:block;width:100%;-webkit-box-sizing:border-box;padding:0 15px}
 .ui-navigator-list li.ui-state-active,.ui-navigator-list li.ui-state-hover{background:#0c4da8}
 .ui-scroller{padding:0;margin:0;display:inline-block}

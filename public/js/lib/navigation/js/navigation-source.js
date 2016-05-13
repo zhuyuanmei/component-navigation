@@ -64,8 +64,6 @@ define(function(require, exports, module) {
              * 创建
              */
             _create: function() {
-                prevIndex = 0;
-
                 var _this = this,
                     opts = _this.settings,
                     $el = opts.navListObj,
@@ -73,6 +71,8 @@ define(function(require, exports, module) {
                     name = 'ui-navigator',
                     renderer,
                     html;
+
+                _this.prevIndex;
 
                 // 如果没有包含ul节点，则说明通过指定content来create
                 // 建议把create模式给拆出去。很多时候都是先写好在dom中了。
@@ -113,12 +113,6 @@ define(function(require, exports, module) {
 
                 _this.$list = $list.addClass( name + '-list' );
                 _this.trigger( 'done', $el.addClass( name ), opts );
-
-                var $scroller = $('<div class="ui-scroller"></div>');
-
-                $el.html($scroller);
-
-                $scroller.html($list);
 
                 //绑定相关event
                 _this.bindEvent();
@@ -166,11 +160,11 @@ define(function(require, exports, module) {
                     opts = _this.settings;
 
                 // 第一调用的时候没有prevIndex, 固根据this.index来控制方向。
-                if ( prevIndex === undefined ) {
-                    prevIndex = _this.index ? 0 : 1;
+                if ( _this.prevIndex === undefined ) {
+                    _this.prevIndex = _this.index ? 0 : 1;
                 }
 
-                var dir = to > prevIndex,
+                var dir = to > _this.prevIndex,
 
                 // 如果是想左则找prev否则找next
                     target = $( el )[ dir ? 'next' : 'prev' ](),
@@ -190,7 +184,7 @@ define(function(require, exports, module) {
                         listOffset.left - offset.left, 0, 400 );
                 }
 
-                prevIndex = to;
+                _this.prevIndex = to;
             },
 
             /**
