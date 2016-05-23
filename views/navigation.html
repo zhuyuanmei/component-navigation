@@ -14,28 +14,35 @@
 <body id="J_Navigation">
 <input type="hidden" id="dispatcher" value="home">
 <div id="wrap">
-    <h1>导航内部滑动demo</h1>
+    <!--<h1>导航内部滑动demo</h1>-->
     <div id="J_NavList" class="ui-navigator">
         <div class="ui-scroller">
             <ul class="ui-navigator-list">
-                <li><a href="#test1">首页</a></li>
-                <li><a href="#test1">要闻</a></li>
-                <li><a href="javascript:;">国内</a></li>
-                <li><a href="#test2">国际</a></li>
-                <li><a href="#test3">军事</a></li>
-                <li><a href="#test4">社会</a></li>
-                <li><a href="#test5">娱乐</a></li>
-                <li><a href="#test6">女人</a></li>
-                <li><a href="#">体育</a></li>
-                <li><a href="#test7">科技</a></li>
-                <li><a href="#test8">互联网</a></li>
-                <li><a href="#test9">教育</a></li>
-                <li class="ui-state-active"><a href="#">财经</a></li>
-                <li><a href="#test11">房产</a></li>
-                <li><a href="#test12">汽车</a></li>
+                <li data-id="1_0" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">首页</a></li>
+                <li data-id="1_1" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">要闻</a></li>
+                <li data-id="1_2" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">国内</a></li>
+                <li data-id="1_3" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">国际</a></li>
+                <li data-id="1_4" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">军事</a></li>
+                <li data-id="1_5" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">社会</a></li>
+                <li data-id="1_6" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">娱乐</a></li>
+                <li data-id="1_7" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">女人</a></li>
+                <li data-id="1_8" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">体育</a></li>
+                <li data-id="1_9" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">科技</a></li>
+                <li data-id="1_10" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">互联网</a></li>
+                <li data-id="1_11" data-url="../mockup/json/navigatorItems.json" data-maxPage="2"><a href="javascript:;">教育</a></li>
+                <li data-id="1_12" data-url="../mockup/json/navigatorItems.json" data-maxPage="3" class="ui-state-active"><a href="javascript:;">财经</a></li>
+                <li data-id="1_13" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">房产</a></li>
+                <li data-id="1_14" data-url="../mockup/json/navigatorItems.json" data-maxPage="1"><a href="javascript:;">汽车</a></li>
             </ul>
         </div>
     </div>
+    <div class="ui-navigator-desc" id="J_PullAreaObj">
+        <ul id="J_NavItemContent" data-curPage="2">
+            <img style="display:block;margin:50px auto 0 auto;" src="img/loading.gif">
+        </ul>
+        <div class="ui-refresh-down" style="display:none;"><span class="ui-refresh-icon"></span><span class="ui-refresh-label">加载更多</span></div>
+    </div>
+    <div id="J_ErrorTip" class="error-tip"></div>
 </div>
 <script src="js/lib/zepto/zepto.min.js" type="text/javascript"></script>
 <script src="js/seajs/sea.js?v=1.0.0" data-config="config.js?v=1.0.0" data-main="main.js?v=1.0.0" id="seajsFile"></script>

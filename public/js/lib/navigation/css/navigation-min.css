@@ -11,13 +11,28 @@ del{text-decoration:line-through}
 table{border-collapse:collapse;border-spacing:0}
 .ui-navigator-list,.ui-navigator-list li{list-style:none}
 .ui-navigator-list li{white-space:nowrap}
-.ui-navigator{border-top:1px solid #2468c9;border-bottom:1px solid #0145a5;background:#2773dc;height:34px}
+.ui-navigator{height:34px}
 .ui-navigator-list{width:100%;display:-webkit-box}
-.ui-navigator-list li{line-height:34px;font-size:16px;font-weight:700;text-align:center;-webkit-box-flex:1;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center;}
+.ui-navigator-list li{line-height:34px;font-size:16px;font-weight:700;text-align:center;-webkit-box-flex:1;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center}
 .ui-navigator-list li a{text-decoration:none;color:#fff;display:block;width:100%;-webkit-box-sizing:border-box;padding:0 15px}
 .ui-navigator-list li.ui-state-active,.ui-navigator-list li.ui-state-hover{background:#0c4da8}
-.ui-scroller{padding:0;margin:0;display:inline-block}
+.ui-scroller{padding:0;margin:0;display:inline-block;position:fixed;top:0;left:0;border-top:1px solid #2468c9;border-bottom:1px solid #0145a5;background:#2773dc;z-index:5}
 .ui-scroller .ui-navigator-list{display:table;table-layout:fixed;white-space:nowrap;width:auto}
 .ui-scroller .ui-navigator-list:after{content:'';clear:both;display:inline-block;width:0;height:0;overflow:hidden}
 .ui-scroller .ui-navigator-list li{display:inline-block}
-h1{text-align:center;padding:10px 0;font-weight:bold}
+h1{text-align:center;padding:10px 0;font-weight:700}
+.ui-navigator-desc ul{overflow:hidden}
+.ui-navigator-desc .base-info{border-bottom:1px solid #E1E1E1;padding:15px 25px;overflow:hidden}
+.ui-navigator-desc .base-info .base-info-lt{width:25%;float:left}
+.ui-navigator-desc .base-info .base-info-lt img{width:100%;border-radius:50%}
+.ui-navigator-desc .base-info .base-info-rt{float:left;width:70%;margin-left:5%;position:static;left:0;top:0;-webkit-transform:translateY(0)}
+.ui-navigator-desc .base-info .base-info-rt .user-name{font-size:13px;color:#373737}
+.ui-navigator-desc .base-info .base-info-rt .user-name span{font-size:15px;margin-right:10px}
+.ui-navigator-desc .base-info .base-info-rt .user-phone{margin-top:5px;font-size:13px}
+.ui-navigator-desc .base-info .base-info-rt .hospital{margin-right:10px}
+.ui-navigator-desc .base-info .base-info-rt .desc{margin-top:5px;font-size:14px;color:#999;line-height:22px;word-break:break-all;word-wrap:break-word;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ui-refresh-down{margin-top:10px;background:#fff;padding:1em 10px;font-size:14px;font-weight:700;color:#999;text-align:center;letter-spacing:1px}
+#J_Navigation .error-tip{display:none;width:50%;position:absolute;top:35%;left:50%;-webkit-transform:translate(-50%,-50%);border-radius:5px;padding:10px;background:#000;opacity:.7;color:#fff;font-weight:700;text-align:center;font-size:14px}
+#J_Navigation .error-tip-fade{display:none;width:50%;position:absolute;top:35%;left:50%;-webkit-transform:translate(-50%,-50%);border-radius:5px;padding:10px;background:#000;opacity:.7;color:#fff;font-weight:700;text-align:center;font-size:13px;-webkit-animation:fadetip .5s ease-in-out}
+@-webkit-keyframes fadetip{from{-webkit-transform:translate(-50%,-50%) scale(1,1)}
+    to{-webkit-transform:translate(-50%,-50%) scale(0.9,.9)}}
