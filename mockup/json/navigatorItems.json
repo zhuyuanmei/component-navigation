@@ -1,0 +1,7 @@
+{   "flag":true, "msg":"请求数据出错~",
+    "navigatorItems":
+    [
+        {"name": "小美眉1","url":"img/auto.png","hospital":"城西分院","department":"VIP诊所","post": "主任医师","intro":"1987年开始从事激光治疗，在牙科激光治疗领域很有影响力在牙科激光治疗领域很有影响力"},
+        {"name": "小美眉2","url":"img/auto.png","hospital":"城西分院","department":"VIP诊所","post": "主任医师","intro":"1987年开始从事激光治疗，在牙科激光治疗领域很有影响力在牙科激光治疗领域很有影响力"}
+    ]
+}
