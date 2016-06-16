@@ -3,6 +3,25 @@
  * @since 2016.05.09
  */
 define(function (require, exports, module) {
+    var tpl = {
+        navigatorItemsCont:[
+            '{{#navigatorItems}}',
+            '<li class="base-info">',
+            '<div class="base-info-lt">',
+            '<img src="{{url}}">',
+            '</div>',
+            '<div class="base-info-rt">',
+            '<div class="base-info-rt-hd">',
+            '<div class="user-name"><span>{{name}}</span>{{post}}</div>',
+            '</div>',
+            '<div class="user-phone"><span class="hospital">{{hospital}}</span><span class="department">{{department}}</span></div>',
+            '<div class="desc">简介：{{intro}}</div>',
+            '</div>',
+            '</li>',
+            '{{/navigatorItems}}'
+        ]
+    };
+
     //'导航内部滑动'模块
     if($('#J_Navigation').length){
         require('iscroll');
@@ -29,7 +48,10 @@ define(function (require, exports, module) {
             refreshLabelObj: $('.ui-refresh-label'),
 
             //异常提示语载体对象
-            errorTipObj: $('#J_ErrorTip')
+            errorTipObj: $('#J_ErrorTip'),
+
+            //动态加载渲染模板
+            renderTpl: tpl.navigatorItemsCont
         });
     }
 });

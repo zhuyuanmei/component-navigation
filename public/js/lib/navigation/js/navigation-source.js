@@ -7,25 +7,6 @@
 define(function(require, exports, module) {
     var Mustache = require('mustache');
 
-    var tpl = {
-        navigatorItemsCont:[
-            '{{#navigatorItems}}',
-                '<li class="base-info">',
-                    '<div class="base-info-lt">',
-                        '<img src="{{url}}">',
-                    '</div>',
-                    '<div class="base-info-rt">',
-                        '<div class="base-info-rt-hd">',
-                             '<div class="user-name"><span>{{name}}</span>{{post}}</div>',
-                         '</div>',
-                        '<div class="user-phone"><span class="hospital">{{hospital}}</span><span class="department">{{department}}</span></div>',
-                        '<div class="desc">简介：{{intro}}</div>',
-                    '</div>',
-                '</li>',
-            '{{/navigatorItems}}'
-        ]
-    };
-
     // 生成匹配namespace正则
     function matcherFor( ns ) {
         return new RegExp( '(?:^| )' + ns.replace( ' ', ' .* ?' ) + '(?: |$)' );
@@ -241,7 +222,7 @@ define(function(require, exports, module) {
                             if(res.navigatorItems.length){
                                 var navigatorItemsObj = {navigatorItems: res.navigatorItems};
 
-                                var resultStr = Mustache.render(tpl.navigatorItemsCont.join(''),navigatorItemsObj);
+                                var resultStr = Mustache.render(opts.renderTpl.join(''),navigatorItemsObj);
 
                                 opts.navItemContentObj.html(resultStr);
 
@@ -454,7 +435,7 @@ define(function(require, exports, module) {
                         success: function (res) {
                             if(parseInt($('li.ui-state-active').attr('data-maxPage')) >= parseInt($list.attr('data-curPage'))){
                                 setTimeout(function(){
-                                    var resultHtml = Mustache.render(tpl.navigatorItemsCont.join(''),res);
+                                    var resultHtml = Mustache.render(_this.settings.renderTpl.join(''),res);
 
                                     $list['append'](resultHtml);
                                     _this.afterDataLoading();    //数据加载完成后改变状态
@@ -649,7 +630,10 @@ define(function(require, exports, module) {
         content: null,
 
         // 处于边缘，是否自动滚动的标示符
-        isScrollToNext: true
+        isScrollToNext: true,
+
+        //动态加载渲染模板
+        renderTpl: ''
     };
 
     var rNavigation = function(options){
