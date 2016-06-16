@@ -24,5 +24,8 @@ $.navigation({
             refreshLabelObj: $('.ui-refresh-label'),
 
             //异常提示语载体对象
-            errorTipObj: $('#J_ErrorTip')
+            errorTipObj: $('#J_ErrorTip'),
+            
+            //动态加载渲染模板
+            renderTpl: tpl.navigatorItemsCont
         });
