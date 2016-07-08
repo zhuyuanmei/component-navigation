@@ -16,7 +16,7 @@ table{border-collapse:collapse;border-spacing:0}
 .ui-navigator-list li{line-height:34px;font-size:16px;font-weight:700;text-align:center;-webkit-box-flex:1;display:-webkit-box;-webkit-box-align:center;-webkit-box-pack:center}
 .ui-navigator-list li a{text-decoration:none;color:#fff;display:block;width:100%;-webkit-box-sizing:border-box;padding:0 15px}
 .ui-navigator-list li.ui-state-active,.ui-navigator-list li.ui-state-hover{background:#0c4da8}
-.ui-scroller{padding:0;margin:0;display:inline-block;position:fixed;top:0;left:0;border-top:1px solid #2468c9;border-bottom:1px solid #0145a5;background:#2773dc;z-index:5}
+.ui-scroller{padding:0;margin:0;display:inline-block;position:fixed;top:0;left:0;border-top:1px solid #2468c9;border-bottom:1px solid #0145a5;background:#2773dc;z-index:5;min-width:100%}
 .ui-scroller .ui-navigator-list{display:table;table-layout:fixed;white-space:nowrap;width:auto}
 .ui-scroller .ui-navigator-list:after{content:'';clear:both;display:inline-block;width:0;height:0;overflow:hidden}
 .ui-scroller .ui-navigator-list li{display:inline-block}
